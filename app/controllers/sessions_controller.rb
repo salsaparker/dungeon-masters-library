@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   def create
     @admin = Admin.where(username: params[:username]).first
     if @admin.present? && @admin.authenticate(params[:password])
-      session[:user_id] = @user.id
+      session[:admin_id] = @admin.id
       redirect_to root_path
     else
       flash[:alert] = 'YOU SHALL NOT PASS!!!'
