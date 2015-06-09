@@ -1,0 +1,8 @@
+<% @books.each do |b| %>
+  <h1><%= b.title %></h1>
+    <h3><%= b.author %></h3>
+    <h3><%= b.genre %></h3>
+    <h3><%= b.number_of_pages %> </h3>
+    <h3><%= b.difficulty_level %></h3>
+    <h3><%= b.stat_bonus %></h3>
+<% end %>
