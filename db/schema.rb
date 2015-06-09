@@ -25,8 +25,8 @@ ActiveRecord::Schema.define(version: 20150609201455) do
   end
 
   create_table "books", force: :cascade do |t|
-    t.string   "title",            null: false
-    t.string   "author",           null: false
+    t.string   "title"
+    t.string   "author"
     t.string   "genre"
     t.integer  "number_of_pages"
     t.integer  "difficulty_level"

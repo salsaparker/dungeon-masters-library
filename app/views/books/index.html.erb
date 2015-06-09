@@ -1,6 +1,6 @@
 <h1>Dungeon Masters Bookstore</h1>
 <h3>Greetings, plebs</h3>
 
-<% @books.each do |b| %>
-<p> I wish to know more, sire <%= link_to 'Show', b.title %>
+<% @books.each do |book| %>
+<p>  <%= link_to book.title, book_path(book.id) %> </p>
 <% end %>
