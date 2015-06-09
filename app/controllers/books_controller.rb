@@ -18,7 +18,10 @@ class BooksController < ApplicationController
   end
 
   def update
-    
+    if @book.update(books_params)
+      redirect_to book_path(@book.id)
+    else
+      render :edit
   end
 
   def show
@@ -26,7 +29,8 @@ class BooksController < ApplicationController
   end
 
   def destroy
-    
+    @book.destroy
+    redirect_to root_path
   end
 
 private
