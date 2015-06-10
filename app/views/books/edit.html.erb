@@ -1,0 +1,11 @@
+<h1>Enter New Tome</h1>
+
+<%= form_for(@book) do |b| %>
+ <p> Title <%= b.text_field(:title) %></p>
+ <p> Author <%= b.text_field(:author) %></p>
+ <p> Genre <%= b.text_field(:genre) %></p>
+ <p> Number of pages <%= b.text_field(:number_of_pages) %></p>
+ <p> Difficulty level <%= b.text_field(:difficulty_level) %></p>
+ <p> Stat Bonus <%= b.text_field(:stat_bonus) %></p>
+ <%= b.submit %>
+ <% end %>
