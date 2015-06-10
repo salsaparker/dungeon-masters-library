@@ -1,12 +1,14 @@
-    <h1><%= @book.title %></h1>
-    
-    <li><%= @book.author %><li>
-    <li><%= @book.genre %><li>
-    <li><%= @book.number_of_pages %><li>
-    <li><%= @book.difficulty_level %><li>
-    <li><%= @book.stat_bonus %><li>
+<%= link_to 'Back', books_path, class: 'btn btn-info glyphicon glyphicon-arrow-left' %>
 
-      <% if admin_signed_in? %>
-      <%= link_to('Edit', edit_book_path(@book.id)) %> 
-      <%= link_to('Delete', book_path(@book.id), method: :delete) %> 
-      <% end %>
+<h1><%= @book.title %></h1>
+
+<li><%= @book.author %><li>
+<li><%= @book.genre %><li>
+<li><%= @book.number_of_pages %><li>
+<li><%= @book.difficulty_level %><li>
+<li><%= @book.stat_bonus %><li>
+
+  <% if admin_signed_in? %>
+  <%= link_to('Edit', edit_book_path(@book.id)) %> 
+  <%= link_to('Delete', book_path(@book.id), method: :delete) %> 
+  <% end %>
