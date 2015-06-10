@@ -1,9 +1,12 @@
     <h1><%= @book.title %></h1>
-    <h3><%= @book.author %></h3>
-    <h3><%= @book.genre %></h3>
-    <h3><%= @book.number_of_pages %> </h3>
-    <h3><%= @book.difficulty_level %></h3>
-    <h3><%= @book.stat_bonus %></h3>
+    
+    <li><%= @book.author %><li>
+    <li><%= @book.genre %><li>
+    <li><%= @book.number_of_pages %><li>
+    <li><%= @book.difficulty_level %><li>
+    <li><%= @book.stat_bonus %><li>
 
-      <%= link_to 'edit', edit_book_path(book.id) %> </p>
-  <%= link_to 'delete', book_path(book.id), method: :delete %> 
+      <% if admin_signed_in? %>
+      <%= link_to('Edit', edit_book_path(@book.id)) %> 
+      <%= link_to('Delete', book_path(@book.id), method: :delete) %> 
+      <% end %>
