@@ -9,8 +9,8 @@
 <body>
   <header>
   <% if admin_signed_in? %>
-  <%= link_to('New Tome', new_book_path) %> 
-  <%= link_to('Log out', logout_path, method: :delete) %>
+  <%= link_to 'NewTome', new_book_path, class: 'btn btn-success glyphicon glyphicon-book' %> 
+  <%= link_to 'Logout', logout_path, method: :delete, class: 'btn btn-warning glyphicon glyphicon-heart-empty' %>
   <% end %>
 <%= yield %>
 
