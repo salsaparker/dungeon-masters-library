@@ -7,12 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header>
-  <% if admin_signed_in? %>
-  <%= link_to 'NewTome', new_book_path, class: 'btn btn-success glyphicon glyphicon-book' %> 
-  <%= link_to 'Logout', logout_path, method: :delete, class: 'btn btn-warning glyphicon glyphicon-heart-empty' %>
-  <% end %>
+  <div class="container">
+    <header>
+    <% if admin_signed_in? %>
+    <%= link_to 'NewTome', new_book_path, class: 'btn btn-success glyphicon glyphicon-book' %> 
+    <%= link_to 'Logout', logout_path, method: :delete, class: 'btn btn-warning glyphicon glyphicon-heart-empty' %>
+    <% end %>
+    </header>
 <%= yield %>
-
+  </div>
 </body>
 </html>

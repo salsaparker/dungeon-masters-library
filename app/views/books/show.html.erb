@@ -1,12 +1,34 @@
+<div class="container">
     <h1><%= @book.title %></h1>
-    
-    <li><%= @book.author %><li>
-    <li><%= @book.genre %><li>
-    <li><%= @book.number_of_pages %><li>
-    <li><%= @book.difficulty_level %><li>
-    <li><%= @book.stat_bonus %><li>
+      <table class="table">
+        <thead>
+           <th>Author</th>
+           <th>Genre</th>
+           <th>Number of Pages</th>
+           <th>Difficulty Level</th>
+           <th>Stat Bonus</th>
+        </thead>
 
-      <% if admin_signed_in? %>
-      <%= link_to('Edit', edit_book_path(@book.id)) %> 
-      <%= link_to('Delete', book_path(@book.id), method: :delete) %> 
-      <% end %>
+        <tbody>
+          <tr>
+            <td><%= @book.author %></td>
+            <td><%= @book.genre %></td>
+            <td><%= @book.number_of_pages %></td>
+            <td><%= @book.difficulty_level %></td>
+            <td><%= @book.stat_bonus %></td>
+          </tr>
+        </tbody>
+      </table>
+        <% if admin_signed_in? %>
+          <%= link_to('Edit', edit_book_path(@book.id)) %> 
+          <%= link_to('Delete', book_path(@book.id), method: :delete) %> 
+        <% end %>
+</div>
+<div class="row">
+
+  <div class="col-xs-6">
+  </div>
+  <div class="col-xs-6">
+  </div>
+
+</div>
